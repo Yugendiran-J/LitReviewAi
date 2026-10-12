@@ -1,0 +1,337 @@
+/* =========================================================
+   LITREVIEWAI
+   RESEARCH LAB DESIGN SYSTEM
+   ========================================================= */
+
+:root {
+
+  /* ---------- Background ---------- */
+
+  --lr-bg: #f3f1eb;
+  --lr-surface: #faf9f5;
+  --lr-white: #ffffff;
+
+  /* ---------- Text ---------- */
+
+  --lr-ink: #202522;
+  --lr-text: #38423e;
+  --lr-muted: #78817c;
+  --lr-faint: #a4aaa6;
+
+  /* ---------- Brand ---------- */
+
+  --lr-teal: #176f67;
+  --lr-teal-dark: #10564f;
+  --lr-teal-light: #e3efec;
+
+  /* ---------- Secondary ---------- */
+
+  --lr-orange: #b96835;
+  --lr-orange-light: #f3e6dc;
+
+  --lr-green: #39805d;
+  --lr-green-light: #e5f0e9;
+
+  --lr-red: #b84d43;
+  --lr-red-light: #f4e4e1;
+
+  /* ---------- Borders ---------- */
+
+  --lr-border: #dadcd5;
+  --lr-border-light: #e7e8e3;
+
+  /* ---------- Navigation ---------- */
+
+  --lr-sidebar: #222a27;
+  --lr-sidebar-light: #2b3531;
+  --lr-sidebar-text: #9ca7a2;
+  --lr-sidebar-active: #34443f;
+
+  /* ---------- Shadows ---------- */
+
+  --lr-shadow-sm:
+    0 2px 8px rgba(
+      25,
+      35,
+      31,
+      0.04
+    );
+
+  --lr-shadow:
+    0 8px 28px rgba(
+      25,
+      35,
+      31,
+      0.055
+    );
+
+  --lr-shadow-lg:
+    0 18px 50px rgba(
+      25,
+      35,
+      31,
+      0.08
+    );
+
+  /* ---------- Radius ---------- */
+
+  --lr-radius-sm: 4px;
+
+  --lr-radius: 6px;
+
+  --lr-radius-lg: 8px;
+
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background:
+    var(--lr-bg);
+
+  color:
+    var(--lr-ink);
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing:
+    antialiased;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   RESEARCH TYPOGRAPHY
+   ========================================================= */
+
+.lr-serif {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+.lr-mono {
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+   ========================================================= */
+
+.lr-page-enter {
+
+  animation:
+    lrPageEnter
+    450ms
+    cubic-bezier(
+      .22,
+      .8,
+      .2,
+      1
+    )
+    both;
+
+}
+
+
+@keyframes lrPageEnter {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   FADE UP
+   ========================================================= */
+
+.lr-fade-up {
+
+  animation:
+    lrFadeUp
+    500ms
+    cubic-bezier(
+      .22,
+      .8,
+      .2,
+      1
+    )
+    both;
+
+}
+
+
+@keyframes lrFadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   STAGGER
+   ========================================================= */
+
+.lr-delay-1 {
+  animation-delay: 80ms;
+}
+
+
+.lr-delay-2 {
+  animation-delay: 160ms;
+}
+
+
+.lr-delay-3 {
+  animation-delay: 240ms;
+}
+
+
+.lr-delay-4 {
+  animation-delay: 320ms;
+}
+
+
+/* =========================================================
+   SUBTLE HOVER
+   ========================================================= */
+
+.lr-hover {
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+
+}
+
+
+.lr-hover:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    var(--lr-shadow);
+
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 7px;
+
+  height: 7px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background:
+    var(--lr-bg);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    #bfc4bf;
+
+  border-radius:
+    10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    #9da49f;
+
+}
